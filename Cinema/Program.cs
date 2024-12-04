@@ -10,7 +10,7 @@ namespace Cinema
 		{
 			var builder = WebApplication.CreateBuilder(args);
 			builder.Services.AddDbContext<CinemaContext>(options =>
-			    options.UseSqlServer(builder.Configuration.GetConnectionString("CinemaContext") ?? throw new InvalidOperationException("Connection string 'CinemaContext' not found.")));
+				options.UseSqlServer(builder.Configuration.GetConnectionString("CinemaContext") ?? throw new InvalidOperationException("Connection string 'CinemaContext' not found.")));
 
 			// Add services to the container.
 			builder.Services.AddRazorPages();
@@ -38,3 +38,5 @@ namespace Cinema
 		}
 	}
 }
+
+/// 
